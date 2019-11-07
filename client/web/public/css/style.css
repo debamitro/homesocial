@@ -1,0 +1,41 @@
+body
+{
+    font-family: Helvetica;
+    font-size: 0.8em;
+}
+
+.main
+{
+    width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.header
+{
+    font-family: Times New Roman;
+    font-size: 2em;
+}
+
+.header-button
+{
+    font-size: 0.5em;
+}
+
+#posts
+{
+    padding: 2px;
+}
+
+.one-post
+{
+    padding: 5px;
+
+//    border-width: 1px;
+//    border-color: #e0e0e0;
+//    border-style: solid;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #f0f0f0;
+}

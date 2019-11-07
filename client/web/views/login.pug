@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Login
+    meta(name='viewport',content='width=device-width, initial-scale=1')
+  body
+    div
+      if status == "failed"
+        p Login failed, please try again
+      form(method='POST',action='authenticate')
+        input#login-id(type='text',name='username')
+        button#login-button(type='submit') Login
