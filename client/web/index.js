@@ -17,7 +17,10 @@ app.set('view engine','pug')
 app.get('/', (req, res) => {
     if (req.session.user && req.session.user != '')
     {
-        res.render ('index',{username: req.session.user})
+        res.render ('index',{
+            username: req.session.user,
+            serverurl: req.session.serverurl
+        })
     }
     else
     {
@@ -29,6 +32,7 @@ app.post('/authenticate', (req, res) => {
     if (req.body.username != '')
     {
         req.session.user = req.body.username
+        req.session.serverurl = req.body.serverurl
         res.redirect ('/')
     }
     else

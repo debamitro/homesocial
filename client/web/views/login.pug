@@ -8,5 +8,6 @@ html
       if status == "failed"
         p Login failed, please try again
       form(method='POST',action='authenticate')
+        input#server-url(type='text',name='serverurl')
         input#login-id(type='text',name='username')
         button#login-button(type='submit') Login

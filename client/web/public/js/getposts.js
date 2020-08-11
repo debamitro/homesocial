@@ -1,6 +1,6 @@
 window.core = {
-    get_posts : () => {
-        window.utils.get_ajax_json ('http://localhost:3001/posts', (data) => {
+    get_posts : (url) => {
+        window.utils.get_ajax_json (`${url}/posts`, (data) => {
             var fullText = '';
             data.posts.forEach ( (item, i) => {
                 fullText += '<div class="one-post">' + '@' + item.author
@@ -12,12 +12,12 @@ window.core = {
         })
     },
 
-    submit_post : (author, postText) => {
+    submit_post : (author, postText, url) => {
         var formdata = {
             'author':author,
             'time':'12:00am',
             'text':postText
         };
-        window.utils.put_ajax_json ('http://localhost:3001/post', JSON.stringify(formdata));
+        window.utils.put_ajax_json (`${url}/post`, JSON.stringify(formdata));
     }
 }
