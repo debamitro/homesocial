@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     {
         res.render ('index',{
             username: req.session.user,
-            serverurl: req.session.serverurl
+            serverurl: req.hostname
         })
     }
     else

@@ -1,5 +1,5 @@
 window.utils.on_ready ( () => {
-     const server_port = 3001
+    const server_port = 3001
     window.core.get_posts (`http://${server_host}:${server_port}`);
 
     document.getElementById ('new-post-submit').addEventListener('click', (event) => {
