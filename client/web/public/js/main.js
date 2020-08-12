@@ -8,6 +8,7 @@ window.utils.on_ready ( () => {
             document.getElementById('new-post-text').value,
             `http://${server_host}:${server_port}`
         );
+        window.core.get_posts (`http://${server_host}:${server_port}`);
         event.preventDefault();
         return false;
     });

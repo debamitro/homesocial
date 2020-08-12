@@ -1,8 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3001
-let current_host = 'localhost'
-
 const posts = require('./posts')
 
 app.use(express.json())
@@ -18,16 +15,13 @@ app.use(function(req, res, next) {
 app.get('/posts', (req, res) => posts.create_posts_json (res))
 app.post('/post', (req, res, next) => {
     posts.new_post (req.body)
+    res.send('posted successfully')
 })
 
-const readline = require ('readline')
-const rl = readline.createInterface ({
-  input : process.stdin,
-  output: process.stdout
-})
+const port = 3001
+let current_host = process.env.SERVER_HOSTNAME
+if (current_host == null || current_host == '') {
+  current_host = 'localhost'
+}
 
-rl.question('What is your IP address?', (ip_address) => {
-  current_host = ip_address
-  rl.close()
-  app.listen(port, () => console.log(`Example app listening on host ${current_host} port ${port}!`))
-})
+app.listen(port, () => console.log(`Example app listening on host ${current_host} port ${port}!`))
