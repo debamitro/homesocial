@@ -1,1 +1,2 @@
 CREATE TABLE t_posts (author text, time integer, text text);
+CREATE TABLE t_people (name text, description text, age integer);

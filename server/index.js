@@ -18,6 +18,8 @@ app.post('/post', (req, res, next) => {
     res.send('posted successfully')
 })
 
+app.get('/profile/:person', (req, res) => posts.create_profile (req.params.person, res))
+
 const port = 3001
 let current_host = process.env.SERVER_HOSTNAME
 if (current_host == null || current_host == '') {

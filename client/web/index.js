@@ -46,4 +46,11 @@ app.post('/logout', (req, res) => {
     res.redirect('/')
 })
 
+app.get('/profile/:person', (req, res) => {
+    res.render ('profile', { 
+        person : req.params.person,
+        serverurl : req.hostname 
+    })
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

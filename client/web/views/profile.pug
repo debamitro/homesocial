@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title
+      = 'Homesocial - Profile of ' + person 
+    meta(name='viewport',content='width=device-width, initial-scale=1')
+    script(src='../js/utils.js')
+    script
+      !=    'const server_host = \"' + serverurl + '\";'
+      !=    'const person = \"' + person + '\";'
+    script(src='../js/profile.js')
+    link(rel='stylesheet',href='../css/normalize.css')
+    link(rel='stylesheet',href='../css/basscss.css')
+    link(rel='stylesheet',href='../css/btns.css')
+    link(rel='stylesheet',href='../css/colors.css')
+    link(rel='stylesheet',href='../css/style.css')
+  body
+    div(class='main')
+      div(class='header') Homesocial
+      div(class='clearfix')
+        span(class='h1') 
+          = person
+      div#profile_description(class='clearfix')

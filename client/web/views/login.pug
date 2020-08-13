@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Login
+    title Homesocial - Login
     meta(name='viewport',content='width=device-width, initial-scale=1')
     link(rel='stylesheet',href='css/normalize.css')
     link(rel='stylesheet',href='css/basscss.css')
@@ -12,5 +12,8 @@ html
       if status == "failed"
         p Login failed, please try again
       form(method='POST',action='authenticate')
+        input(type='hidden',name='username',value='baba')
+        button(type='submit',class='btn btn-s') Login as Baba
+      form(method='POST',action='authenticate')
+        button#login-button(type='submit',class='btn btn-s') Login as
         input#login-id(type='text',name='username')
-        button#login-button(type='submit',class='btn btn-s') Login

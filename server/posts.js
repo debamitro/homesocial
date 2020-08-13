@@ -10,5 +10,10 @@ exports = module.exports = {
         const stmt = db.prepare ('INSERT INTO t_posts (author, time, text) VALUES (?,?,?)');
         const info = stmt.run (jsonData.author, jsonData.time, jsonData.text);
         db.close();
+    },
+    create_profile : (person, res) => {
+        const db = new sqlite ('test.db', { readonly: true });
+        res.json (db.prepare ('SELECT description FROM t_people WHERE name = ?').get (person));
+        db.close ();
     }
 }
