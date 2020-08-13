@@ -9,6 +9,9 @@ html
       !=    'const server_host = \"' + serverurl + '\";' 
     script(src='js/main.js')
     link(rel='stylesheet',href='css/normalize.css')
+    link(rel='stylesheet',href='css/basscss.css')
+    link(rel='stylesheet',href='css/btns.css')
+    link(rel='stylesheet',href='css/colors.css')
     link(rel='stylesheet',href='css/style.css')
   body
     div(class='main')
@@ -20,6 +23,6 @@ html
       div#new-post
         form(name='foo',method='POST',action='post')
           input#new-post-author(type='hidden',name='author',value=username)
-          input#new-post-text(type='text',name='text')
-          button#new-post-submit(type='submit') Post it
+          textarea#new-post-text(name='text',class='rounded')
+          button#new-post-submit(type='submit',class='btn btn-s') Post
       div#posts

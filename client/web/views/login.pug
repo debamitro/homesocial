@@ -3,10 +3,14 @@ html
   head
     title Login
     meta(name='viewport',content='width=device-width, initial-scale=1')
+    link(rel='stylesheet',href='css/normalize.css')
+    link(rel='stylesheet',href='css/basscss.css')
+    link(rel='stylesheet',href='css/btns.css')
+    link(rel='stylesheet',href='css/style.css')  
   body
-    div
+    div(class='main')
       if status == "failed"
         p Login failed, please try again
       form(method='POST',action='authenticate')
         input#login-id(type='text',name='username')
-        button#login-button(type='submit') Login
+        button#login-button(type='submit',class='btn btn-s') Login
