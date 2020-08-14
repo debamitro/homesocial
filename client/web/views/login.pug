@@ -6,14 +6,16 @@ html
     link(rel='stylesheet',href='css/normalize.css')
     link(rel='stylesheet',href='css/basscss.css')
     link(rel='stylesheet',href='css/btns.css')
-    link(rel='stylesheet',href='css/style.css')  
+    link(rel='stylesheet',href='css/style.css')
+    script(src="js/utils.js")
+    script
+      !=    'const server_host = \"' + serverurl + '\";' 
+    script(src="js/login.js")
   body
     div(class='main')
       if status == "failed"
         p Login failed, please try again
-      form(method='POST',action='authenticate')
-        input(type='hidden',name='username',value='baba')
-        button(type='submit',class='btn btn-s') Login as Baba
+      div#login-as-existing
       form(method='POST',action='authenticate')
         button#login-button(type='submit',class='btn btn-s') Login as
         input#login-id(type='text',name='username')

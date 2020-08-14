@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
     }
     else
     {
-        res.render ('login')
+        res.render ('login', {
+            serverurl : req.hostname
+        })
     }
 })
 
@@ -32,7 +34,6 @@ app.post('/authenticate', (req, res) => {
     if (req.body.username != '')
     {
         req.session.user = req.body.username
-        req.session.serverurl = req.body.serverurl
         res.redirect ('/')
     }
     else

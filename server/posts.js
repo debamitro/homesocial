@@ -15,5 +15,10 @@ exports = module.exports = {
         const db = new sqlite ('test.db', { readonly: true });
         res.json (db.prepare ('SELECT description FROM t_people WHERE name = ?').get (person));
         db.close ();
+    },
+    get_profiles : (res) => {
+        const db = new sqlite ('test.db', { readonly: true });
+        res.json (db.prepare ('SELECT name FROM t_people').all());
+        db.close ();
     }
 }

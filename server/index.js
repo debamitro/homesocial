@@ -20,6 +20,8 @@ app.post('/post', (req, res, next) => {
 
 app.get('/profile/:person', (req, res) => posts.create_profile (req.params.person, res))
 
+app.get('/profiles', (req, res) => posts.get_profiles (res))
+
 const port = 3001
 let current_host = process.env.SERVER_HOSTNAME
 if (current_host == null || current_host == '') {
