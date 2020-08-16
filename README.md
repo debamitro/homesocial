@@ -7,6 +7,10 @@ A simple in-home social network, suitable for young and old alike. This is just 
 * Served locally over your Wifi - you own all the data
 * Very safe and secure since it does not hit the internet at all
 
+## Demo
+
+Since this works off the internet, providing a live demo is not possible. [Here is a demo created with screenshots](https://debamitro.github.io/homesocial-demo-1/) - it should convey how this can be used.
+
 ## How to use
 
 ### Basic use
