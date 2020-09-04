@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Homesocial
+    title= sitename
     meta(name='viewport',content='width=device-width, initial-scale=1')
     script(src='js/utils.js')
     script(src='js/getposts.js')
@@ -15,7 +15,7 @@ html
     link(rel='stylesheet',href='css/style.css')
   body
     div(class='main')
-      div(class='header') Homesocial
+      div(class='header')= sitename
         span(class='header-button')
           = 'Logged in as ' + username
           form(method='POST',action='logout')

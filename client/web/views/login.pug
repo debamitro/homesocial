@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Homesocial - Login
+    title= sitename + ' - Login'
     meta(name='viewport',content='width=device-width, initial-scale=1')
     link(rel='stylesheet',href='css/normalize.css')
     link(rel='stylesheet',href='css/basscss.css')
@@ -19,3 +19,5 @@ html
       form(method='POST',action='authenticate')
         button#login-button(type='submit',class='btn btn-s') Login as
         input#login-id(type='text',name='username')
+        input#login-remember(type='checkbox',name='remember')
+        | Remember me

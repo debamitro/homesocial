@@ -12,15 +12,25 @@ app.use(function(req, res, next) {
   next();
 })
 
-app.get('/posts', (req, res) => posts.create_posts_json (res))
+app.get('/posts', (req, res) => posts.get_posts_json (res))
 app.post('/post', (req, res, next) => {
     posts.new_post (req.body)
     res.send('posted successfully')
 })
 
-app.get('/profile/:person', (req, res) => posts.create_profile (req.params.person, res))
+app.get('/profile/:person', (req, res) => posts.get_profile (req.params.person, res))
 
 app.get('/profiles', (req, res) => posts.get_profiles (res))
+
+app.post ('/profile/new', (req, res) => {
+  posts.new_profile (req.body)
+  res.send ('created successfully')
+})
+
+app.post('/delete_post', (req, res) => {
+  posts.delete_posts ()
+  res.send ('all posts deleted')
+})
 
 const port = 3001
 let current_host = process.env.SERVER_HOSTNAME
