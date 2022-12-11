@@ -11,6 +11,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "better-sqlite3": "^5.4.3",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
