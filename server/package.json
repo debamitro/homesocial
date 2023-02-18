@@ -10,7 +10,7 @@
   "author": "Debamitro Chakraborti",
   "license": "Apache-2.0",
   "dependencies": {
-    "better-sqlite3": "^5.4.3",
+    "better-sqlite3": "^8.1.0",
     "express": "^4.17.1"
   }
 }
