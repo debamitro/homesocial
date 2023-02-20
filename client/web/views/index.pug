@@ -14,16 +14,19 @@ html
     link(rel='stylesheet',href='css/colors.css')
     link(rel='stylesheet',href='css/style.css')
   body
-    div(class='main')
-      div(class='header')= sitename
-        span(class='header-button')
-          = 'Logged in as ' + username
-          form(method='POST',action='logout')
-            button(type='submit') Logout
+    div(class='main bg-aqua')
+      div(class='header bg-blue white clearfix p1')
+        div(class='left')= sitename
+        div(class='right')
+          span(class='header-button')
+            = 'Logged in as ' + username
+            form(method='POST',action='logout')
+              button(type='submit') Logout
       div#new-post
         form(name='foo',method='POST',action='post')
           input#new-post-author(type='hidden',name='author',value=username)
-          textarea#new-post-text(name='text',class='rounded block')
-          br
-          button#new-post-submit(type='submit',class='btn btn-s') Post
+          div('clearfix fit')
+            textarea#new-post-text(name='text',class='rounded block fit')
+          div('clearfix')
+            button#new-post-submit(type='submit',class='btn btn-s') Post
       div#posts

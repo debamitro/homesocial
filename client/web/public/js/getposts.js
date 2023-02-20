@@ -4,10 +4,10 @@ window.core = {
             var fullText = '';
             data.posts.forEach ( (item, i) => {
                 const item_time = new Date (item.time * 1000)
-                fullText += '<div class="border rounded"><div class="p0 bg-silver">' 
-                + '<a href="/profile/' + item.author + '">' + '@' + item.author + '</a>'
+                fullText += '<div class="rounded mb1 bg-white"><div class="p0 bg-navy silver">' 
+                + '<a class="silver" href="/profile/' + item.author + '">' + '@' + item.author + '</a>'
                     + ' - ' + item_time.toString()
-                    + '</div><div class="p1 bold">' + item.text + '</div></div>';
+                    + '</div><div class="p1 h3 post-text">' + item.text + '</div></div>';
             });
             var postsDiv = document.getElementById('posts');
             postsDiv.innerHTML = fullText;
